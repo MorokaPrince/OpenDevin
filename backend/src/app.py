@@ -1,23 +1,10 @@
-# src/app.py
-from flask import Flask, jsonify, request
-import subprocess
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return jsonify(message="Hello World from Flask!")
-
-@app.route('/ollama', methods=['POST'])
-def ollama_inference():
-    data = request.json
-    prompt = data.get('prompt', '')
-
-    # Run Ollama CLI command
-    result = subprocess.run(['ollama', 'infer', prompt], capture_output=True, text=True)
-    response = result.stdout
-
-    return jsonify(message=response)
+    return 'Hello, OpenDevin!'
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
