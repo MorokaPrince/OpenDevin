@@ -8,7 +8,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-# Copy the .env file
-COPY .env .env
-
 CMD ["flask", "run", "--host=0.0.0.0"]
