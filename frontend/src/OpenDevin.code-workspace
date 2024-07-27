@@ -1,8 +1,7 @@
 {
 	"folders": [
 		{
-			"name": "OpenDevin",
-			"path": "../.."
+			"path": "../../../../../OpenDevin"
 		}
 	],
 	"settings": {}
